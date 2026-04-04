@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
   namespace: argocd
 spec:
-  project: cilium
+  project: default
   source:
     chart: cilium
     repoURL: https://helm.cilium.io/
@@ -30,7 +30,7 @@ spec:
             enabled: true
           replicas: 1
   destination:
-    server: '192.168.122.200'
+    server: 'https://192.168.122.200:6443'
     namespace: kube-system
   syncPolicy:
     automated:

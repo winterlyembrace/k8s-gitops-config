@@ -8,16 +8,16 @@ metadata:
 spec:
   destination:
     namespace: kube-system
-    server: '192.168.122.200'
+    server: 'https://192.168.122.200:6443'
   project: default
   source:
-    path: k8s-gitops-config/cilium-config
+    path: cilium-config
     repoURL: https://github.com/winterlyembrace/k8s-gitops-config.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
     automated:
-      prune: true
+      prune: false
       selfHeal: true
 ---
