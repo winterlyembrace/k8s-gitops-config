@@ -12,7 +12,7 @@ spec:
     targetRevision: HEAD
     path: k8s-gitops-config/cilium-config
   destination:
-    server: 192.168.122.200
+    server: https://192.168.122.200:6443
     namespace: kube-system
   syncPolicy:
     automated:
