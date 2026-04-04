@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
   namespace: argocd
 spec:
-  project: default
+  project: cilium
   source:
     chart: cilium
     repoURL: https://helm.cilium.io/

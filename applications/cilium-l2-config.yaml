@@ -6,7 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
   namespace: argocd
 spec:
-  project: default
+  project: k8s-gitops-config
   source:
     repoURL: https://github.com/winterlyembrace/k8s-gitops-config.git
     targetRevision: HEAD
