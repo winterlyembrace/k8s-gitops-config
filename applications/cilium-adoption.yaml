@@ -34,5 +34,5 @@ spec:
     namespace: kube-system
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: true
