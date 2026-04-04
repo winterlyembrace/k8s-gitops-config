@@ -30,7 +30,7 @@ spec:
             enabled: true
           replicas: 1
   destination:
-    server: kubernetes-admin@kubernetes
+    server: 192.168.122.200
     namespace: kube-system
   syncPolicy:
     automated:
