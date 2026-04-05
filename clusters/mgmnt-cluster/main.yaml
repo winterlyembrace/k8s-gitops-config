@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: vault
+    name: tofu-controller
   interval: 10m
   path: clusters/mgmnt-cluster
   prune: true
