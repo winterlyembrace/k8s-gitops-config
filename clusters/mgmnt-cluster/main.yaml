@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: vault
   interval: 10m
   path: clusters/mgmnt-cluster
   prune: true
