@@ -4,9 +4,9 @@ metadata:
   name: infra-controllers
   namespace: flux-system
 spec:
-  interval: 10m
-  path: .
-  prune: true
   sourceRef:
     kind: GitRepository
     name: flux-system
+  interval: 10m
+  path: .
+  prune: true
