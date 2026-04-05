@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: tofu-controller
-  interval: 10m
+    name: flux-system
+  interval: 5m
   path: clusters/mgmnt-cluster
   prune: true

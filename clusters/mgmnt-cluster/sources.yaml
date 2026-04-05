@@ -6,8 +6,6 @@ metadata:
 spec:
   interval: 5m
   url: https://helm.releases.hashicorp.com
-  ref:
-    branch: main
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
@@ -17,8 +15,6 @@ metadata:
 spec:
   interval: 5m
   url: https://charts.external-secrets.io
-  ref:
-    branch: main
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
@@ -28,5 +24,3 @@ metadata:
 spec:
   interval: 5m
   url: https://flux-iac.github.io/tofu-controller/
-  ref:
-    branch: main

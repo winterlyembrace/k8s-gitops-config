@@ -4,6 +4,7 @@ metadata:
   name: vault
   namespace: vault
 spec:
+  targetNamespace: vault
   chart:
     spec:
       chart: vault
