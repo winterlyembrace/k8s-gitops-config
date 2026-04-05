@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  url: https://flux-iac.github.io/tofu-controller/apiVersion: 
+  url: https://flux-iac.github.io/tofu-controller/apiVersion
 kind: HelmRepository
 metadata:
   name: tofu-controller
