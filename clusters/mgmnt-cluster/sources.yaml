@@ -15,3 +15,12 @@ metadata:
 spec:
   interval: 1h
   url: https://charts.external-secrets.io
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: tofu-controller
+  namespace: flux-system
+spec:
+  interval: 1h
+  url: https://flux-iac.github.io/tofu-controller/
