@@ -6,3 +6,4 @@ resources:
 - infra-kustomization.yaml
 - namespaces.yaml
 - sources.yaml
+- main.yaml
