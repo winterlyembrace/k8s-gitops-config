@@ -14,5 +14,5 @@ spec:
   data:
     - secretKey: id_rsa
       remoteRef:
-        key: secret/libvirt/ssh
+        key: "libvirt/ssh"
         property: id_rsa 
