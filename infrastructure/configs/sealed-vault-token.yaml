@@ -1,0 +1,14 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: vault-token
+  namespace: flux-system
+spec:
+  encryptedData:
+    token: AgBtNNZPyoSOgDrVPDe68ZNpxD/620lYo5eQpMQWTx8POV6ehpMk3qVcGE2DmSJKyPv49M58gBH98pxte9d5VBjQUogp3r+x28yuju8/sFpEuqsscNRnyA6HN9xV1BuB/zjASC6pkB4f4RBWXTjdbt7p2iuVMuZ3SoKOas2HhjGFVTwp25pXvJf3CLdX9MeHkIhFjg5x4hlWnfZNABuJAh2E12dNzNdLGOTLiKLwEyNl3f0p4DWZpIrJarh7vM2eWOXEoktwni8CZA2UOcIEIA7nNa5Fd9OQkP0Lp0xHFecvCYetczriRMyasXr+A8FxcES/ddXX+P22FEicVkqQDi84SGaZoUekmBY1q23XpeaSQzQnn20iImG4SrE4nV9BX6Nom3prWiILNZNNpAOqzOOLovvzfTQezp43QgoETZmCZfFk+IOaS2FF5UHtc4kKVGjKa11XNsYbZtgRsXWEMaJUzSrEWuigSFmYX2X2LcZf9SepTdY/w8GQHn1mOVLzqR6hLwUJuBxL8nugp4/w9u1zvKK+uv1LtzWXjuVL0+C5hZ6wOawV6lcPftrY7SalCqTimhTxHBghXcWIA/K5WMMO3W4QzQQIbHollj+R/G9yzV6VPfxEJzFsOjrCAQahjv92GQ7n5y5nxHIgnmmpxRCGzQtkLzuH3cmld4J44UfiMRTD7uGqmVp9/IlxVLynKO985E6k
+  template:
+    metadata:
+      name: vault-token
+      namespace: flux-system
+    type: Opaque
