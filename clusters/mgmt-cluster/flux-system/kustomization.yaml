@@ -5,3 +5,4 @@ resources:
 - gotk-sync.yaml
 - infra-kustomization.yaml
 - namespaces.yaml
+- sources.yaml
