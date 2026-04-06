@@ -8,5 +8,5 @@ spec:
     kind: GitRepository
     name: flux-system
   interval: 5m
-  path: clusters/mgmt-cluster
+  path: ./clusters/mgmt-cluster
   prune: true
