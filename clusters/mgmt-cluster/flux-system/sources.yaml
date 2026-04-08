@@ -4,7 +4,7 @@ metadata:
   name: hashicorp
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1h
   url: https://helm.releases.hashicorp.com
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -13,7 +13,7 @@ metadata:
   name: external-secrets
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1h
   url: https://charts.external-secrets.io
 ---
 apiVersion: source.toolkit.fluxcd.io/v1
@@ -22,7 +22,7 @@ metadata:
   name: tofu-controller
   namespace: flux-system
 spec:
-  interval: 5m
+  interval: 1h
   url: https://flux-iac.github.io/tofu-controller/
 ---
 apiVersion: source.toolkit.fluxcd.io/v1

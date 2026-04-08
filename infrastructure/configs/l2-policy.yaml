@@ -3,15 +3,10 @@ kind: CiliumL2AnnouncementPolicy
 metadata:
   name: "l2-policy"
 spec:
-  serviceSelector:
-    matchLabels:
-      color: blue
+  serviceSelector: {}
   nodeSelector:
-    matchExpressions:
-      - key: "kubernetes.io/os"
-        operator: In
-        values:
-          - linux
+    matchLabels:
+      node-role.com/type: worker
   interfaces:
     - ens4
   externalIPs: true

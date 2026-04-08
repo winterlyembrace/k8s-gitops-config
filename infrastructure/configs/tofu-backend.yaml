@@ -1,0 +1,16 @@
+apiVersion: infra.contrib.fluxcd.io/v1
+kind: Terraform
+metadata:
+  name: remote-infra-setup
+  namespace: flux-system
+spec:
+  interval: 1h
+  approvePlan: auto
+  path: ./terraform/remote-cluster-resources
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  kubeConfig:
+    secretRef:
+      name: remote-cluster-kubeconfig
+      key: value
