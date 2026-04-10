@@ -1,0 +1,27 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-controllers
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: ./apps/controllers
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-configs
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: app-controllers
+  interval: 1h
+  path: ./apps/configs
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
