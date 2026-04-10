@@ -36,10 +36,7 @@ spec:
               resources:
                 requests:
                   storage: 10Gi
-    # Settings for k3d:
-    prometheus-node-exporter:
-      hostRootfs: false
-      service:
-        annotations:
-          prometheus.io/scrape: "true"
-          prometheus.io/port: "9100"
+    alertmanager:
+      enabled: true
+      alertmanagerSpec:
+        configSecret: alertmanager-telegram-config
