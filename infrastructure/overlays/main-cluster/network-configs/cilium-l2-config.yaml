@@ -1,0 +1,23 @@
+apiVersion: "cilium.io/v2alpha1"
+kind: CiliumL2AnnouncementPolicy
+metadata:
+  name: "l2-policy"
+  namespace: flux-system
+spec:
+  serviceSelector: {}
+  nodeSelector:
+    matchLabels:
+      node-role.com/type: worker
+  interfaces:
+    - ens4
+  externalIPs: true
+  loadBalancerIPs: true
+---
+apiVersion: "cilium.io/v2alpha1"
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: "lan-pool"
+  namespace: flux-system
+spec:
+  blocks:
+    - cidr: "192.168.122.50/28"
