@@ -36,3 +36,13 @@ spec:
               resources:
                 requests:
                   storage: 10Gi
+    # Settings for k3d:
+    prometheus-node-exporter:
+      hostRootfs: false
+      extraArgs:
+        - --path.rootfs=/host
+      volumeMounts:
+        - name: root
+          mountPath: /host
+          readOnly: true
+          mountPropagation: HostToContainer
