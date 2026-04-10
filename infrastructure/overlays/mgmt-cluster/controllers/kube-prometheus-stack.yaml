@@ -39,10 +39,7 @@ spec:
     # Settings for k3d:
     prometheus-node-exporter:
       hostRootfs: false
-      extraArgs:
-        - --path.rootfs=/host
-      volumeMounts:
-        - name: root
-          mountPath: /host
-          readOnly: true
-          mountPropagation: HostToContainer
+      service:
+        annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/port: "9100"
