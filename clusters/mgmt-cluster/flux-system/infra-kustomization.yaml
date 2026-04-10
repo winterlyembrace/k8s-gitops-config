@@ -4,8 +4,8 @@ metadata:
   name: infra-controllers
   namespace: flux-system
 spec:
-  interval: 5m
-  path: ./infrastructure/controllers
+  interval: 1h
+  path: ./infrastructure/overlays/mgmt-cluster/controllers
   prune: true
   sourceRef:
     kind: GitRepository
@@ -19,8 +19,8 @@ metadata:
 spec:
   dependsOn:
     - name: infra-controllers 
-  interval: 5m
-  path: ./infrastructure/configs
+  interval: 1h
+  path: ./infrastructure/overlays/mgmt-cluster/configs
   prune: true
   sourceRef:
     kind: GitRepository
