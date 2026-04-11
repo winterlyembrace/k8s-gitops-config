@@ -1,0 +1,16 @@
+apiVersion: vault.pnd-solution.com/v1
+kind: VaultAuthRole
+metadata:
+  name: gitlab-runner-role
+  namespace: vault
+spec:
+  methodRef: gitlab-jwt
+  roleType: jwt
+  boundClaims:
+    project_id: "80330072" 
+    ref: "main"
+    ref_type: "branch"
+  tokenPolicies: 
+    - gitlab-runner-policy
+  userClaim: "user_email"
+  tokenTtl: 3600

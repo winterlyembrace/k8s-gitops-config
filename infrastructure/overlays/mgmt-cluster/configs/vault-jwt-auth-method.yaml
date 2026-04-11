@@ -1,0 +1,11 @@
+apiVersion: vault.pnd-solution.com/v1
+kind: VaultAuthMethod
+metadata:
+  name: gitlab-jwt
+  namespace: vault
+spec:
+  type: jwt
+  path: jwt-gitlab
+  config:
+    jwks_url: "https://gitlab.com/-/jwks"
+    bound_issuer: "gitlab.com"

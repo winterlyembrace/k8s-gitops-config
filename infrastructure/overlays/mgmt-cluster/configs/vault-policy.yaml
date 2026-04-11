@@ -1,0 +1,10 @@
+apiVersion: vault.pnd-solution.com/v1
+kind: VaultPolicy
+metadata:
+  name: gitlab-runner-policy
+  namespace: vault
+spec:
+  policy: |
+    path "secret/data/production/ci-secrets/*" {
+      capabilities = ["read"]
+    }
