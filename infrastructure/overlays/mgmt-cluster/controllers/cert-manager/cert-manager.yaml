@@ -19,3 +19,6 @@ spec:
     crds: CreateReplace
   values:
     installCRDs: true
+    webhook:
+      hostNetwork: true
+      securePort: 10260
