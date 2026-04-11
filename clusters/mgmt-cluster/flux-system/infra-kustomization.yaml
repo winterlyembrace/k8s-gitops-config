@@ -33,7 +33,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./infrastructure/controllers/cert-manager
+  path: ./infrastructure/overlays/mgmt-cluster/controllers/cert-manager
   prune: true
   sourceRef:
     kind: GitRepository
@@ -48,7 +48,7 @@ spec:
   dependsOn:
     - name: cert-manager-infra
   interval: 1h
-  path: ./infrastructure/controllers/vault-config-operator
+  path: ./infrastructure/overlays/mgmt-cluster/controllers/vault-config-operator
   prune: true
   sourceRef:
     kind: GitRepository
