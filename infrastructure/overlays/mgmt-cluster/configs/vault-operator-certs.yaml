@@ -1,0 +1,35 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: vault-config-operator-issuer
+  namespace: vault
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vault-config-operator-serving-cert
+  namespace: vault
+spec:
+  secretName: vault-config-operator-certs
+  dnsNames:
+  - vault-config-operator.vault.svc
+  - vault-config-operator.vault.svc.cluster.local
+  issuerRef:
+    name: vault-config-operator-issuer
+    kind: Issuer
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vault-config-operator-webhook-cert
+  namespace: vault
+spec:
+  secretName: webhook-server-cert
+  dnsNames:
+  - vault-config-operator-webhook.vault.svc
+  - vault-config-operator-webhook.vault.svc.cluster.local
+  issuerRef:
+    name: vault-config-operator-issuer
+    kind: Issuer
