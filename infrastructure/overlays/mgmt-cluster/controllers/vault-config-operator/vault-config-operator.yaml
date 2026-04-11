@@ -18,8 +18,4 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
-    webhook:
-      enabled: true
-      certManager:
-        enabled: true
-        certName: vault-config-operator-certs
+    enableCertManager: true
